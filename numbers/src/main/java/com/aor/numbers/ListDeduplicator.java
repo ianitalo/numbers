@@ -15,9 +15,10 @@ public class ListDeduplicator {
      * but withou duplicates. The order of the numbers might
      * change.
      */
-    public List<Integer> deduplicate(List<Integer> list) {
-        ListSorter listSorter = new ListSorter();
-        List<Integer> sorted = listSorter.sort(list);
+    public List<Integer> deduplicate(List<Integer> list, GenericSorter sortedlist) {
+        /*ListSorter listSorter = new ListSorter();
+        List<Integer> sorted = listSorter.sort(list);*/
+        List<Integer> sorted = sortedlist.sort();
         List<Integer> unique = new ArrayList<>();
 
         Integer last = null;

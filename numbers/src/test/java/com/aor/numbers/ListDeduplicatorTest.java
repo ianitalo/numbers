@@ -19,15 +19,16 @@ public class ListDeduplicatorTest {
     @Test
     public void deduplicate()
     {
-        class StubListDeduplicate implements GenericListDeduplicate{
+        class StubListSorter implements GenericSorter{
             @Override
-            public List<Integer> deduplicate(List<Integer> list) {
-                return  Arrays.asList(1, 2, 4, 5);
+            public List<Integer> sort() {
+                return  Arrays.asList(1, 2, 2, 4, 5);
             }
         }
-        ListDeduplicator deduplicator = new ListDeduplicator();
-        List<Integer> distinct = deduplicator.deduplicate(list);
+        StubListSorter stubsort = new StubListSorter();
+        ListDeduplicator deduplicated =  new ListDeduplicator();
+        List<Integer> res = deduplicated.deduplicate(list,stubsort);
 
-        Assertions.assertEquals(expected, distinct);
+        Assertions.assertEquals(expected, res);
     }
 }
