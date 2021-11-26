@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ListDeduplicatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-26T15:43:37" hostname="LAPTOP-CKQCTNKQ" time="0.384">
-  <properties/>
-  <testcase name="deduplicate" classname="ListDeduplicatorTest" time="0.384"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
